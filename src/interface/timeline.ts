@@ -108,6 +108,10 @@ export interface EditData {
    * @description 改变大小结束回调（return false可阻止onChange触发）
    */
   onActionResizeEnd?: (params: { action: TimelineAction; row: TimelineRow; start: number; end: number; dir: 'right' | 'left' }) => void;
+
+  onRowDrop?:(
+    e: React.MouseEvent<HTMLElement, MouseEvent>
+  ) => void;
   /**
    * @description 点击行回调
    */
